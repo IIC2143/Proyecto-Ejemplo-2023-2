@@ -7,3 +7,71 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 237ms (Views: 226.2ms | ActiveRecord: 0.0ms | Allocations: 99898)
 
 
+Started GET "/" for ::1 at 2023-09-08 15:41:12 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 6082)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 6194)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 10267)
+
+
+  
+ActionView::Template::Error (undefined method `about_path' for #<ActionView::Base:0x0000000000a4b0>
+
+            target.public_send get_method_for_string str
+                  ^^^^^^^^^^^^):
+    53:         <h2>Bienvenido a nuestra página de inicio</h2>
+    54:         <p>Este es un ejemplo de una página de inicio simple.</p>
+    55:         <p>Puedes personalizarla y agregar tu propio contenido aquí.</p>
+    56:         <%= link_to "About us", :about, class: "boton" %>
+    57: 
+    58:     </div>
+    59: 
+  
+app/views/home/index.html.erb:56
+Started GET "/" for ::1 at 2023-09-08 15:41:50 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 630)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 36172)
+Completed 200 OK in 42ms (Views: 37.0ms | ActiveRecord: 0.0ms | Allocations: 40305)
+
+
+Started GET "/home/about" for ::1 at 2023-09-08 15:41:52 -0300
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 1.1ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 2649)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 3046)
+
+
+Started GET "/home/about" for ::1 at 2023-09-08 15:43:28 -0300
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.8ms | Allocations: 399)
+  Rendered layout layouts/application.html.erb (Duration: 50.5ms | Allocations: 35762)
+Completed 200 OK in 58ms (Views: 52.3ms | ActiveRecord: 0.0ms | Allocations: 39897)
+
+
+Started GET "/" for ::1 at 2023-09-08 15:45:25 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 614)
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | Allocations: 36113)
+Completed 200 OK in 42ms (Views: 35.8ms | ActiveRecord: 0.0ms | Allocations: 40246)
+
+
+Started GET "/home/about" for ::1 at 2023-09-08 15:45:31 -0300
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 1.3ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2740)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 3137)
+
+
