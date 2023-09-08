@@ -82,3 +82,41 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 2677)
 
 
+Started GET "/" for ::1 at 2023-09-08 16:07:47 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 617)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 36016)
+Completed 200 OK in 37ms (Views: 31.5ms | ActiveRecord: 0.0ms | Allocations: 40163)
+
+
+Started GET "/products" for ::1 at 2023-09-08 16:07:49 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2857)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 3635)
+
+
+Started GET "/" for ::1 at 2023-09-08 16:27:33 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 617)
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 35967)
+Completed 200 OK in 43ms (Views: 37.3ms | ActiveRecord: 0.0ms | Allocations: 40114)
+
+
+Started GET "/products" for ::1 at 2023-09-08 16:27:42 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2851)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 3629)
+
+
