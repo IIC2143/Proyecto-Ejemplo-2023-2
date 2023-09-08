@@ -45,3 +45,40 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 14988)
 
 
+Started GET "/products" for ::1 at 2023-09-08 15:46:46 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 375)
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 35815)
+Completed 200 OK in 39ms (Views: 33.6ms | ActiveRecord: 0.0ms | Allocations: 39962)
+
+
+Started GET "/" for ::1 at 2023-09-08 15:46:51 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 363)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3037)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 3813)
+
+
+Started GET "/products" for ::1 at 2023-09-08 15:46:52 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 2413)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 2695)
+
+
+Started GET "/products" for ::1 at 2023-09-08 15:46:56 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 2413)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 2677)
+
+
