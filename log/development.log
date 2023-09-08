@@ -7,116 +7,73 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 237ms (Views: 226.2ms | ActiveRecord: 0.0ms | Allocations: 99898)
 
 
-  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
-  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-08 18:30:58.532810"], ["updated_at", "2023-09-08 18:30:58.532810"]]
-  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Migrating to CreateProducts (20230908183242)
-  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "price" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230908183242"]]
-  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Started GET "/" for ::1 at 2023-09-08 15:34:07 -0300
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+Started GET "/" for ::1 at 2023-09-08 15:41:12 -0300
 Processing by HomeController#index as HTML
   Rendering layout layouts/application.html.erb
   Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 508)
-  Rendered layout layouts/application.html.erb (Duration: 211.6ms | Allocations: 92794)
-Completed 200 OK in 255ms (Views: 224.9ms | ActiveRecord: 0.0ms | Allocations: 99467)
+  Rendered home/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 6082)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 6194)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 10267)
 
 
-Started GET "/products" for ::1 at 2023-09-08 15:34:12 -0300
   
-ActionController::RoutingError (No route matches [GET] "/products"):
+ActionView::Template::Error (undefined method `about_path' for #<ActionView::Base:0x0000000000a4b0>
+
+            target.public_send get_method_for_string str
+                  ^^^^^^^^^^^^):
+    53:         <h2>Bienvenido a nuestra página de inicio</h2>
+    54:         <p>Este es un ejemplo de una página de inicio simple.</p>
+    55:         <p>Puedes personalizarla y agregar tu propio contenido aquí.</p>
+    56:         <%= link_to "About us", :about, class: "boton" %>
+    57: 
+    58:     </div>
+    59: 
   
-Started GET "/products" for ::1 at 2023-09-08 15:34:54 -0300
-Processing by ProductsController#index as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering products/index.html.erb within layouts/application
-  Rendered products/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 153)
-  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 14205)
-Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 14988)
-
-
-Started GET "/products" for ::1 at 2023-09-08 15:46:46 -0300
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by ProductsController#index as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering products/index.html.erb within layouts/application
-  Rendered products/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 375)
-  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 35815)
-Completed 200 OK in 39ms (Views: 33.6ms | ActiveRecord: 0.0ms | Allocations: 39962)
-
-
-Started GET "/" for ::1 at 2023-09-08 15:46:51 -0300
+app/views/home/index.html.erb:56
+Started GET "/" for ::1 at 2023-09-08 15:41:50 -0300
 Processing by HomeController#index as HTML
   Rendering layout layouts/application.html.erb
   Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 363)
-  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3037)
-Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 3813)
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 630)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 36172)
+Completed 200 OK in 42ms (Views: 37.0ms | ActiveRecord: 0.0ms | Allocations: 40305)
 
 
-Started GET "/products" for ::1 at 2023-09-08 15:46:52 -0300
-Processing by ProductsController#index as HTML
+Started GET "/home/about" for ::1 at 2023-09-08 15:41:52 -0300
+Processing by HomeController#about as HTML
   Rendering layout layouts/application.html.erb
-  Rendering products/index.html.erb within layouts/application
-  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
-  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 2413)
-Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 2695)
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 1.1ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 2649)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 3046)
 
 
-Started GET "/products" for ::1 at 2023-09-08 15:46:56 -0300
-Processing by ProductsController#index as HTML
+Started GET "/home/about" for ::1 at 2023-09-08 15:43:28 -0300
+Processing by HomeController#about as HTML
   Rendering layout layouts/application.html.erb
-  Rendering products/index.html.erb within layouts/application
-  Rendered products/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 9)
-  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 2413)
-Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 2677)
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.8ms | Allocations: 399)
+  Rendered layout layouts/application.html.erb (Duration: 50.5ms | Allocations: 35762)
+Completed 200 OK in 58ms (Views: 52.3ms | ActiveRecord: 0.0ms | Allocations: 39897)
 
 
-Started GET "/" for ::1 at 2023-09-08 16:07:47 -0300
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-09-08 15:45:25 -0300
 Processing by HomeController#index as HTML
   Rendering layout layouts/application.html.erb
   Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 617)
-  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 36016)
-Completed 200 OK in 37ms (Views: 31.5ms | ActiveRecord: 0.0ms | Allocations: 40163)
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 614)
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | Allocations: 36113)
+Completed 200 OK in 42ms (Views: 35.8ms | ActiveRecord: 0.0ms | Allocations: 40246)
 
 
-Started GET "/products" for ::1 at 2023-09-08 16:07:49 -0300
-Processing by ProductsController#index as HTML
+Started GET "/home/about" for ::1 at 2023-09-08 15:45:31 -0300
+Processing by HomeController#about as HTML
   Rendering layout layouts/application.html.erb
-  Rendering products/index.html.erb within layouts/application
-  Rendered products/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 150)
-  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2857)
-Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 3635)
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 1.3ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2740)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 3137)
 
-
-Started GET "/" for ::1 at 2023-09-08 16:27:33 -0300
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by HomeController#index as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 617)
-  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 35967)
-Completed 200 OK in 43ms (Views: 37.3ms | ActiveRecord: 0.0ms | Allocations: 40114)
-
-
-Started GET "/products" for ::1 at 2023-09-08 16:27:42 -0300
-Processing by ProductsController#index as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering products/index.html.erb within layouts/application
-  Rendered products/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 150)
-  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2851)
-Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 3629)
 
 
