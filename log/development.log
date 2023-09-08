@@ -7,6 +7,7 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 237ms (Views: 226.2ms | ActiveRecord: 0.0ms | Allocations: 99898)
 
 
+
 Started GET "/" for ::1 at 2023-09-08 15:41:12 -0300
 Processing by HomeController#index as HTML
   Rendering layout layouts/application.html.erb
@@ -73,5 +74,6 @@ Processing by HomeController#about as HTML
   Rendered home/about.html.erb within layouts/application (Duration: 1.3ms | Allocations: 182)
   Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2740)
 Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 3137)
+
 
 
